@@ -1,4 +1,14 @@
-const Product = (props) => {
+import React from 'react';
+
+// Define the interface for the props
+interface ProductProps {
+    name: string;
+    desc: string;
+    btn: string;
+}
+
+// Use the interface in the component definition
+const Product: React.FC<ProductProps> = (props) => {
     return (
         <div className="flex flex-col gap-4 justify-between">
             <span className='text-[24px] green-text font-extrabold'>
